@@ -1,0 +1,53 @@
+{{>navigation}}
+{{>navbar}}
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-4 mt-3">
+                <h2 class="heading-section">Documentos</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-wrap">
+                    <table class="table myaccordion table-hover" id="accordion">
+                        
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Documento</th>
+                                <th>Estado</th>
+                                <th>Moneda</th>
+                                <th>Empresa</th>
+                                <th>Documento</th>
+                                <th>subtotal</th>
+                                <th>IGV</th>
+                                <th>Total</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each documentos}}
+                            <tr>
+                                <th class="text-dark"></th>
+                                <td>{{iddocumentocontable}}</td>
+                                <td>{{idestado}}</td>
+                                <td>{{idmoneda}}</td>
+                                <td>{{idempresa}}</td>
+                                <td>{{iddocumentocontable}}</td>
+                                <td>{{monto_subtotal}}</td>
+                                <td>{{monto_igv}}</td>
+                                <td>{{monto_total}}</td>
+                                <td>
+                                    <a class="btn btn-warning btn-xs" href=""><i class="far fa-edit"></i> Editar</a> 
+                                    <a class="btn btn-danger btn-xs" href=""><i class="fas fa-minus-circle"></i> Eliminar</a>                                                                   
+                                </td>
+                            </tr>                                               
+                            {{/each}}                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
